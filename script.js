@@ -151,69 +151,133 @@
 
 
 
-function mergeSort(arr){
+// function mergeSort(arr){
 
     
-    console.log('in merge sort')
+//     console.log('in merge sort')
 
-    console.log(arr)
+//     console.log(arr)
 
-    if (arr.length <= 1) {
-        console.log('retruning')
-        return arr
-    }
+//     if (arr.length <= 1) {
+//         console.log('retruning')
+//         return arr
+//     }
 
       
 
-    else {
+//     else {
 
-          //sort the left half 
+//           //sort the left half 
 
-        let halfArrLength = Math.floor(arr.length / 2)
+//         let halfArrLength = Math.floor(arr.length / 2)
 
-        let leftArr = arr.slice(0, halfArrLength)
+//         let leftArr = arr.slice(0, halfArrLength)
 
-        let rightArr = arr.slice(halfArrLength)
-
-
-        let sortedLeft = mergeSort(leftArr)
-
-        let sortedRight = mergeSort(rightArr)
+//         let rightArr = arr.slice(halfArrLength)
 
 
-        return merge(sortedLeft,sortedRight)
+//         let sortedLeft = mergeSort(leftArr)
+
+//         let sortedRight = mergeSort(rightArr)
+
+
+//         return merge(sortedLeft,sortedRight)
 
     
 
-    }
+//     }
   
 
-}
+// }
 
 
 
-function merge(left,right){
+// function merge(left,right){
 
-    result = []
+//     result = []
 
-    while (left.length > 0 && right.length > 0 ){
-        if (left[0] <= right[0]){
-            result.push(left.shift())
-        }
+//     while (left.length > 0 && right.length > 0 ){
+//         if (left[0] <= right[0]){
+//             result.push(left.shift())
+//         }
 
-        else {
-            result.push(right.shift())
-        }
-    }
+//         else {
+//             result.push(right.shift())
+//         }
+//     }
 
    
 
 
-    return result.concat(left, right);
+//     return result.concat(left, right);
 
 
+// }
+
+
+// console.log(mergeSort([5,6,10,1,3,7,2])
+// )
+
+//test shift 
+// let arr = [2,3,4,5,6]
+
+// arr.shift()
+
+// console.log(arr)
+
+// // arr.unshift()
+
+// // console.log(arr)
+
+// arr.unshift(0)
+
+// console.log(arr)
+
+
+// let arr = [1,2,3,4,5,6,7]
+
+// function findSum(){
+
+//     let total = 0 
+//     for (let i of arr) {
+
+//         console.log(i)
+
+//         console.log(typeof(i))
+//         total += i
+
+//     }
+
+//     return total
+// }
+
+// console.log(findSum(arr))
+
+
+// let animalArr = ['cat', 'dog','fish','frog']
+
+// for (let i in animalArr){
+//     console.log(i)
+
+//     console.log(typeof(i))
+// }
+
+// let slicedArr = animalArr.slice()
+
+// console.log(animalArr.length)
+
+const linkedList = () => {
+    
+    const addNode = ()=>{
+
+        console.log('adding node')
+
+    }
+
+
+    return {addNode}
 }
 
 
-console.log(mergeSort([5,6,10,1,3,7,2])
-)
+let newLinkedList = linkedList()
+newLinkedList.addNode()
