@@ -1,0 +1,484 @@
+// let name = 'rian'
+
+// function hash(name) {
+//     return name.charAt(0);
+// }
+
+// console.log(hash(name))
+
+// console.log(name)
+
+// const addresses = [
+//     {
+//       "ADDRESS": "1 STRAITS BOULEVARD SINGAPORE CHINESE CULTURAL CENTRE SINGAPORE 018906",
+//       "BLK_NO": "1",
+//       "BUILDING": "SINGAPORE CHINESE CULTURAL CENTRE",
+//       "LATITUDE": "1.2758046353113",
+//       "LONGITUDE": "103.849615008325",
+//       "LONGTITUDE": "103.849615008325",
+//       "POSTAL": "018906",
+//       "ROAD_NAME": "STRAITS BOULEVARD",
+//       "SEARCHVAL": "SINGAPORE CHINESE CULTURAL CENTRE",
+//       "X": "29813.6634912575",
+//       "Y": "28697.5207557455"
+//     },
+//     {
+//       "ADDRESS": "11A STRAITS BOULEVARD TEMPORARY SITE OFFICE SINGAPORE 018907",
+//       "BLK_NO": "11A",
+//       "BUILDING": "TEMPORARY SITE OFFICE",
+//       "LATITUDE": "1.27494969350594",
+//       "LONGITUDE": "103.85166524159",
+//       "LONGTITUDE": "103.85166524159",
+//       "POSTAL": "018907",
+//       "ROAD_NAME": "STRAITS BOULEVARD",
+//       "SEARCHVAL": "TEMPORARY SITE OFFICE",
+//       "X": "30041.838898385897",
+//       "Y": "28602.9872441757"
+//     },
+//     {
+//       "ADDRESS": "5A MARINA GARDENS DRIVE SINGAPORE 018910",
+//       "BLK_NO": "5A",
+//       "BUILDING": "NIL",
+//       "LATITUDE": "1.2795867875087599",
+//       "LONGITUDE": "103.86895567364701",
+//       "LONGTITUDE": "103.86895567364701",
+//       "POSTAL": "018910",
+//       "ROAD_NAME": "MARINA GARDENS DRIVE",
+//       "SEARCHVAL": "5A MARINA GARDENS DRIVE SINGAPORE 018910",
+//       "X": "31966.1207873868",
+//       "Y": "29115.7533728331"
+//     },
+//     {
+//       "ADDRESS": "2 CENTRAL BOULEVARD CENTRAL BOULEVARD TOWERS SINGAPORE 018916",
+//       "BLK_NO": "2",
+//       "BUILDING": "CENTRAL BOULEVARD TOWERS",
+//       "LATITUDE": "1.2797438901136202",
+//       "LONGITUDE": "103.851591286045",
+//       "LONGTITUDE": "103.851591286045",
+//       "POSTAL": "018916",
+//       "ROAD_NAME": "CENTRAL BOULEVARD",
+//       "SEARCHVAL": "CENTRAL BOULEVARD TOWERS",
+//       "X": "30033.6044631479",
+//       "Y": "29133.1046761069"
+//     },
+//     {
+//       "ADDRESS": "21 PARK STREET DBS MARINA BAY MRT STATION SINGAPORE 018925",
+//       "BLK_NO": "21",
+//       "BUILDING": "DBS MARINA BAY MRT STATION",
+//       "LATITUDE": "1.2764273547671798",
+//       "LONGITUDE": "103.85459777675399",
+//       "LONGTITUDE": "103.85459777675399",
+//       "POSTAL": "018925",
+//       "ROAD_NAME": "PARK STREET",
+//       "SEARCHVAL": "DBS MARINA BAY MRT STATION",
+//       "X": "30368.205612112797",
+//       "Y": "28766.3819018323"
+//     },
+//     {
+//       "ADDRESS": "21 PARK STREET MARINA BAY MRT STATION SINGAPORE 018925",
+//       "BLK_NO": "21",
+//       "BUILDING": "MARINA BAY MRT STATION",
+//       "LATITUDE": "1.27631114381587",
+//       "LONGITUDE": "103.854604975361",
+//       "LONGTITUDE": "103.854604975361",
+//       "POSTAL": "018925",
+//       "ROAD_NAME": "PARK STREET",
+//       "SEARCHVAL": "MARINA BAY MRT STATION",
+//       "X": "30369.0068661775",
+//       "Y": "28753.531901758197"
+//     },
+//     {
+//       "ADDRESS": "21 PARK STREET MARINA BAY MRT STATION SINGAPORE 018925",
+//       "BLK_NO": "21",
+//       "BUILDING": "MARINA BAY MRT STATION (NS27)",
+//       "LATITUDE": "1.2764092632251103",
+//       "LONGITUDE": "103.854595266332",
+//       "LONGTITUDE": "103.854595266332",
+//       "POSTAL": "018925",
+//       "ROAD_NAME": "PARK STREET",
+//       "SEARCHVAL": "MARINA BAY MRT STATION (NS27)",
+//       "X": "30367.9262386225",
+//       "Y": "28764.381430253397"
+//     },
+//     {
+//       "ADDRESS": "21 PARK STREET OCBC MARINA BAY MRT SINGAPORE 018925",
+//       "BLK_NO": "21",
+//       "BUILDING": "OCBC MARINA BAY MRT",
+//       "LATITUDE": "1.2764273547671798",
+//       "LONGITUDE": "103.85459777675399",
+//       "LONGTITUDE": "103.85459777675399",
+//       "POSTAL": "018925",
+//       "ROAD_NAME": "PARK STREET",
+//       "SEARCHVAL": "OCBC MARINA BAY MRT",
+//       "X": "30368.205612112797",
+//       "Y": "28766.3819018323"
+//     },
+//     {
+//       "ADDRESS": "21 PARK STREET UOB MARINA BAY MRT STATION SINGAPORE 018925",
+//       "BLK_NO": "21",
+//       "BUILDING": "UOB MARINA BAY MRT STATION",
+//       "LATITUDE": "1.2764273547671798",
+//       "LONGITUDE": "103.85459777675399",
+//       "LONGTITUDE": "103.85459777675399",
+//       "POSTAL": "018925",
+//       "ROAD_NAME": "PARK STREET",
+//       "SEARCHVAL": "UOB MARINA BAY MRT STATION",
+//       "X": "30368.205612112797",
+//       "Y": "28766.3819018323"
+//     },
+//     {
+//       "ADDRESS": "23 PARK STREET MARINA BAY MRT STATION SINGAPORE 018926",
+//       "BLK_NO": "23",
+//       "BUILDING": "MARINA BAY MRT STATION (CE2)",
+//       "LATITUDE": "1.2762514642374498",
+//       "LONGITUDE": "103.855447156279",
+//       "LONGTITUDE": "103.855447156279",
+//       "POSTAL": "018926",
+//       "ROAD_NAME": "PARK STREET",
+//       "SEARCHVAL": "MARINA BAY MRT STATION (CE2)",
+//       "X": "30462.734976967797",
+//       "Y": "28746.933632647597"
+//     },
+//     {
+//       "ADDRESS": "20A PARK STREET TEMPORARY SITE OFFICE SINGAPORE 018927",
+//       "BLK_NO": "20A",
+//       "BUILDING": "TEMPORARY SITE OFFICE",
+//       "LATITUDE": "1.27524127939473",
+//       "LONGITUDE": "103.853658960578",
+//       "LONGTITUDE": "103.853658960578",
+//       "POSTAL": "018927",
+//       "ROAD_NAME": "PARK STREET",
+//       "SEARCHVAL": "TEMPORARY SITE OFFICE",
+//       "X": "30263.7238617986",
+//       "Y": "28635.2309705298"
+//     },
+//     {
+//       "ADDRESS": "2 PARK STREET SINGAPORE 018928",
+//       "BLK_NO": "2",
+//       "BUILDING": "NIL",
+//       "LATITUDE": "1.27768139609174",
+//       "LONGITUDE": "103.850157273986",
+//       "LONGTITUDE": "103.850157273986",
+//       "POSTAL": "018928",
+//       "ROAD_NAME": "PARK STREET",
+//       "SEARCHVAL": "2 PARK STREET SINGAPORE 018928",
+//       "X": "29874.0120090684",
+//       "Y": "28905.043651687003"
+//     },
+//     {
+//       "ADDRESS": "2 PARK STREET SHENTON WAY MRT STATION SINGAPORE 018928",
+//       "BLK_NO": "2",
+//       "BUILDING": "SHENTON WAY MRT STATION (TE19)",
+//       "LATITUDE": "1.2777168283425",
+//       "LONGITUDE": "103.850367596067",
+//       "LONGTITUDE": "103.850367596067",
+//       "POSTAL": "018928",
+//       "ROAD_NAME": "PARK STREET",
+//       "SEARCHVAL": "SHENTON WAY MRT STATION (TE19)",
+//       "X": "29897.4191489164",
+//       "Y": "28908.961721107404"
+//     },
+//     {
+//       "ADDRESS": "25 PARK STREET SINGAPORE 018929",
+//       "BLK_NO": "25",
+//       "BUILDING": "NIL",
+//       "LATITUDE": "1.27519457380349",
+//       "LONGITUDE": "103.855173769376",
+//       "LONGTITUDE": "103.855173769376",
+//       "POSTAL": "018929",
+//       "ROAD_NAME": "PARK STREET",
+//       "SEARCHVAL": "25 PARK STREET SINGAPORE 018929",
+//       "X": "30432.3101748275",
+//       "Y": "28630.067888135098"
+//     },
+//     {
+//       "ADDRESS": "25 PARK STREET MARINA BAY MRT STATION SINGAPORE 018929",
+//       "BLK_NO": "25",
+//       "BUILDING": "MARINA BAY MRT STATION (TE20)",
+//       "LATITUDE": "1.27474173226843",
+//       "LONGITUDE": "103.85530916792801",
+//       "LONGTITUDE": "103.85530916792801",
+//       "POSTAL": "018929",
+//       "ROAD_NAME": "PARK STREET",
+//       "SEARCHVAL": "MARINA BAY MRT STATION (TE20)",
+//       "X": "30447.3793932004",
+//       "Y": "28579.9951389208"
+//     },
+//     {
+//       "ADDRESS": "51 MARINA SOUTH DRIVE SINGAPORE 018930",
+//       "BLK_NO": "51",
+//       "BUILDING": "NIL",
+//       "LATITUDE": "1.27535833153388",
+//       "LONGITUDE": "103.867027808386",
+//       "LONGTITUDE": "103.867027808386",
+//       "POSTAL": "018930",
+//       "ROAD_NAME": "MARINA SOUTH DRIVE",
+//       "SEARCHVAL": "51 MARINA SOUTH DRIVE SINGAPORE 018930",
+//       "X": "31751.5710579529",
+//       "Y": "28648.189602399198"
+//     },
+//     {
+//       "ADDRESS": "5 STRAITS VIEW THE HEART SINGAPORE 018935",
+//       "BLK_NO": "5",
+//       "BUILDING": "THE HEART",
+//       "LATITUDE": "1.2775262887227101",
+//       "LONGITUDE": "103.85293534419",
+//       "LONGTITUDE": "103.85293534419",
+//       "POSTAL": "018935",
+//       "ROAD_NAME": "STRAITS VIEW",
+//       "SEARCHVAL": "THE HEART",
+//       "X": "30183.189141358198",
+//       "Y": "28887.894871493798"
+//     },
+//     {
+//       "ADDRESS": "7 STRAITS VIEW MARINA ONE EAST TOWER SINGAPORE 018936",
+//       "BLK_NO": "7",
+//       "BUILDING": "MARINA ONE EAST TOWER",
+//       "LATITUDE": "1.2780324223039",
+//       "LONGITUDE": "103.852883150355",
+//       "LONGTITUDE": "103.852883150355",
+//       "POSTAL": "018936",
+//       "ROAD_NAME": "STRAITS VIEW",
+//       "SEARCHVAL": "MARINA ONE EAST TOWER",
+//       "X": "30177.379958583",
+//       "Y": "28943.860464191097"
+//     },
+//     {
+//       "ADDRESS": "9 STRAITS VIEW MARINA ONE WEST TOWER SINGAPORE 018937",
+//       "BLK_NO": "9",
+//       "BUILDING": "MARINA ONE WEST TOWER",
+//       "LATITUDE": "1.27733681299187",
+//       "LONGITUDE": "103.852382415284",
+//       "LONGTITUDE": "103.852382415284",
+//       "POSTAL": "018937",
+//       "ROAD_NAME": "STRAITS VIEW",
+//       "SEARCHVAL": "MARINA ONE WEST TOWER",
+//       "X": "30121.6527262582",
+//       "Y": "28866.9431612883"
+//     },
+//     {
+//       "ADDRESS": "11 MARINA BOULEVARD SINGAPORE 018940",
+//       "BLK_NO": "11",
+//       "BUILDING": "NIL",
+//       "LATITUDE": "1.28071923547797",
+//       "LONGITUDE": "103.85600467736",
+//       "LONGTITUDE": "103.85600467736",
+//       "POSTAL": "018940",
+//       "ROAD_NAME": "MARINA BOULEVARD",
+//       "SEARCHVAL": "11 MARINA BOULEVARD SINGAPORE 018940",
+//       "X": "30524.778289991402",
+//       "Y": "29240.9572506938"
+//     },
+//     {
+//       "ADDRESS": "11 MARINA BOULEVARD MARINA BAY SINGAPORE SINGAPORE 018940",
+//       "BLK_NO": "11",
+//       "BUILDING": "MARINA BAY SINGAPORE",
+//       "LATITUDE": "1.2801145296328602",
+//       "LONGITUDE": "103.856286392833",
+//       "LONGTITUDE": "103.856286392833",
+//       "POSTAL": "018940",
+//       "ROAD_NAME": "MARINA BOULEVARD",
+//       "SEARCHVAL": "MARINA BAY SINGAPORE",
+//       "X": "30556.131532264902",
+//       "Y": "29174.0922781322"
+//     },
+//     {
+//       "ADDRESS": "11 MARINA BOULEVARD RED DOT DESIGN MUSEUM SINGAPORE 018940",
+//       "BLK_NO": "11",
+//       "BUILDING": "RED DOT DESIGN MUSEUM",
+//       "LATITUDE": "1.2801654713349",
+//       "LONGITUDE": "103.856287670998",
+//       "LONGTITUDE": "103.856287670998",
+//       "POSTAL": "018940",
+//       "ROAD_NAME": "MARINA BOULEVARD",
+//       "SEARCHVAL": "RED DOT DESIGN MUSEUM",
+//       "X": "30556.2737312531",
+//       "Y": "29179.7251499034"
+//     },
+//     {
+//       "ADDRESS": "71 MARINA COASTAL DRIVE MARINA SOUTH WHARVES SINGAPORE 018946",
+//       "BLK_NO": "71",
+//       "BUILDING": "MARINA SOUTH WHARVES",
+//       "LATITUDE": "1.2700449289946698",
+//       "LONGITUDE": "103.857323943633",
+//       "LONGTITUDE": "103.857323943633",
+//       "POSTAL": "018946",
+//       "ROAD_NAME": "MARINA COASTAL DRIVE",
+//       "SEARCHVAL": "MARINA SOUTH WHARVES",
+//       "X": "30671.612910006203",
+//       "Y": "28060.6489019431"
+//     },
+//     {
+//       "ADDRESS": "61 MARINA COASTAL DRIVE DBS INTERNATIONAL CRUISE TERMINAL SINGAPORE 018947",
+//       "BLK_NO": "61",
+//       "BUILDING": "DBS INTERNATIONAL CRUISE TERMINAL",
+//       "LATITUDE": "1.2660223100044699",
+//       "LONGITUDE": "103.86052787680799",
+//       "LONGTITUDE": "103.86052787680799",
+//       "POSTAL": "018947",
+//       "ROAD_NAME": "MARINA COASTAL DRIVE",
+//       "SEARCHVAL": "DBS INTERNATIONAL CRUISE TERMINAL",
+//       "X": "31028.1907944446",
+//       "Y": "27615.852012699503"
+//     },
+//     {
+//       "ADDRESS": "61 MARINA COASTAL DRIVE MARINA BAY CRUISE CENTRE SINGAPORE SINGAPORE 018947",
+//       "BLK_NO": "61",
+//       "BUILDING": "MARINA BAY CRUISE CENTRE SINGAPORE",
+//       "LATITUDE": "1.2661827510942",
+//       "LONGITUDE": "103.860462963288",
+//       "LONGTITUDE": "103.860462963288",
+//       "POSTAL": "018947",
+//       "ROAD_NAME": "MARINA COASTAL DRIVE",
+//       "SEARCHVAL": "MARINA BAY CRUISE CENTRE SINGAPORE",
+//       "X": "31020.966220215",
+//       "Y": "27633.5926833153"
+//     },
+//     {
+//       "ADDRESS": "33 MARINA COASTAL DRIVE MARINA SOUTH PIER MRT STATION SINGAPORE 018948",
+//       "BLK_NO": "33",
+//       "BUILDING": "MARINA SOUTH PIER MRT STATION (NS28)",
+//       "LATITUDE": "1.2710270361201002",
+//       "LONGITUDE": "103.86244751573601",
+//       "LONGTITUDE": "103.86244751573601",
+//       "POSTAL": "018948",
+//       "ROAD_NAME": "MARINA COASTAL DRIVE",
+//       "SEARCHVAL": "MARINA SOUTH PIER MRT STATION (NS28)",
+//       "X": "31241.826007018797",
+//       "Y": "28169.251093417402"
+//     },
+//     {
+//       "ADDRESS": "8 MARINA GARDENS DRIVE MARINA BARRAGE SINGAPORE 018951",
+//       "BLK_NO": "8",
+//       "BUILDING": "MARINA BARRAGE",
+//       "LATITUDE": "1.28088410880435",
+//       "LONGITUDE": "103.869885272808",
+//       "LONGTITUDE": "103.869885272808",
+//       "POSTAL": "018951",
+//       "ROAD_NAME": "MARINA GARDENS DRIVE",
+//       "SEARCHVAL": "MARINA BARRAGE",
+//       "X": "32069.575635817797",
+//       "Y": "29259.205939149502"
+//     },
+//     {
+//       "ADDRESS": "18 MARINA GARDENS DRIVE SINGAPORE 018953",
+//       "BLK_NO": "18",
+//       "BUILDING": "NIL",
+//       "LATITUDE": "1.28175820937719",
+//       "LONGITUDE": "103.86158571589199",
+//       "LONGTITUDE": "103.86158571589199",
+//       "POSTAL": "018953",
+//       "ROAD_NAME": "MARINA GARDENS DRIVE",
+//       "SEARCHVAL": "18 MARINA GARDENS DRIVE SINGAPORE 018953",
+//       "X": "31145.901288113597",
+//       "Y": "29355.8477973938"
+//     },
+//     {
+//       "ADDRESS": "18 MARINA GARDENS DRIVE DBS GARDENS BY THE BAY SINGAPORE 018953",
+//       "BLK_NO": "18",
+//       "BUILDING": "DBS GARDENS BY THE BAY",
+//       "LATITUDE": "1.28402150049556",
+//       "LONGITUDE": "103.864915787491",
+//       "LONGTITUDE": "103.864915787491",
+//       "POSTAL": "018953",
+//       "ROAD_NAME": "MARINA GARDENS DRIVE",
+//       "SEARCHVAL": "DBS GARDENS BY THE BAY",
+//       "X": "31516.5079895211",
+//       "Y": "29606.1152004767"
+//     },
+//     {
+//       "ADDRESS": "18 MARINA GARDENS DRIVE EXHIBITION CENTRE SINGAPORE 018953",
+//       "BLK_NO": "18",
+//       "BUILDING": "EXHIBITION CENTRE",
+//       "LATITUDE": "1.28130189464479",
+//       "LONGITUDE": "103.861154922723",
+//       "LONGTITUDE": "103.861154922723",
+//       "POSTAL": "018953",
+//       "ROAD_NAME": "MARINA GARDENS DRIVE",
+//       "SEARCHVAL": "EXHIBITION CENTRE",
+//       "X": "31097.9580731606",
+//       "Y": "29305.390342105202"
+//     },
+//     {
+//       "ADDRESS": "18 MARINA GARDENS DRIVE GARDENS BY THE BAY SINGAPORE 018953",
+//       "BLK_NO": "18",
+//       "BUILDING": "GARDENS BY THE BAY",
+//       "LATITUDE": "1.28156207358364",
+//       "LONGITUDE": "103.86361602725599",
+//       "LONGTITUDE": "103.86361602725599",
+//       "POSTAL": "018953",
+//       "ROAD_NAME": "MARINA GARDENS DRIVE",
+//       "SEARCHVAL": "GARDENS BY THE BAY",
+//       "X": "31371.8586271275",
+//       "Y": "29334.162693942002"
+//     },
+//     {
+//       "ADDRESS": "18 MARINA GARDENS DRIVE GARDENS BY THE BAY (CLOUD FOREST) SINGAPORE 018953",
+//       "BLK_NO": "18",
+//       "BUILDING": "GARDENS BY THE BAY (CLOUD FOREST)",
+//       "LATITUDE": "1.28387301464473",
+//       "LONGITUDE": "103.865993692974",
+//       "LONGTITUDE": "103.865993692974",
+//       "POSTAL": "018953",
+//       "ROAD_NAME": "MARINA GARDENS DRIVE",
+//       "SEARCHVAL": "GARDENS BY THE BAY (CLOUD FOREST)",
+//       "X": "31636.4701790353",
+//       "Y": "29589.697906645"
+//     },]
+
+
+
+// let address18 = addresses.find(add=>add.BLK_NO === '18')
+
+// let combinedStreetandBlock18 = address18.BLK_NO + " "+  address18.ROAD_NAME
+
+// console.log(combinedStreetandBlock18)
+
+
+// let form = document.querySelector('form')
+
+
+// form.addEventListener('submit', handleSubmit)
+
+// function handleSubmit(e){
+
+//     console.log(e)
+
+//     e.preventDefault();
+
+//     console.log(form)
+
+
+//     const formData = new FormData(form)
+
+//     console.log(formData)
+
+
+
+// }
+
+// function hash(string){
+
+//     console.log(string.charCodeAt(0))
+//     return string.charCodeAt(0)
+// }
+
+
+// hash('a')
+
+//objects 
+
+const brianooi = {
+    mynigga : 'Dawg',
+    myboo: "Scarlett Johansson",
+    numberOfMyBalls: 2,
+    spell: ()=> {
+        console.log('coding up some sick shit')
+
+        return 'coding up some sick shit'
+    }
+
+}
+
+console.log(brianooi.spell())
+

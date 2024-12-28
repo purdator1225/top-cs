@@ -130,7 +130,7 @@
 
 // return fibsRec(num, fibRecArr )
 
-   
+
 // }
 
 
@@ -153,7 +153,7 @@
 
 // function mergeSort(arr){
 
-    
+
 //     console.log('in merge sort')
 
 //     console.log(arr)
@@ -163,7 +163,7 @@
 //         return arr
 //     }
 
-      
+
 
 //     else {
 
@@ -183,10 +183,10 @@
 
 //         return merge(sortedLeft,sortedRight)
 
-    
+
 
 //     }
-  
+
 
 // }
 
@@ -206,7 +206,7 @@
 //         }
 //     }
 
-   
+
 
 
 //     return result.concat(left, right);
@@ -266,18 +266,94 @@
 
 // console.log(animalArr.length)
 
-const linkedList = () => {
-    
-    const addNode = ()=>{
+// const linkedList = () => {
 
-        console.log('adding node')
+//     const addNode = () => {
+
+//         console.log('adding node')
+
+//     }
+
+
+//     return { addNode }
+// }
+
+
+// let newLinkedList = linkedList()
+// newLinkedList.addNode()
+
+// //hashing : taking an input and generating a corresponding output
+
+// function hash(name) {
+//     console.log(name.charAt(0))
+//     return name.charAt(0)
+// }
+
+// hash('brian')
+
+// function betterHash(name, surname) {
+//     console.log(name.charCodeAt(0), surname.charAt(0))
+// }
+
+// betterHash('brian', 'ooi')
+
+// function evenBetterHash(string) {
+//     let hashCode = 0 
+
+//     for (let i = 0; i < string.length; i++) {
+
+//         console.log(i)
+
+//         console.log(string.charCodeAt(i))
+//         hashCode += string.charCodeAt(i)
+
+//         console.log(hashCode)
+//     }
+
+
+
+//     console.log(hashCode)
+
+
+//     return hashCode
+// }
+
+
+// evenBetterHash('Fred')
+
+
+// const map1 = new Map()
+
+// map1.set('a', 1);
+
+// map1.set('b', 2);
+
+// console.log(map1)
+
+
+// for (let i of map1){
+//     console.log(i)
+// }
+
+class HashMap{
+    constructor(){
+        this.loadFactor = 0.8
+        this.capacity = 16
 
     }
 
+    hash(key){
+        let hashCode= 0 
 
-    return {addNode}
+        const primeNumber = 31
+
+        for(let i = 0; i < key.length; i++){
+            hashCode = primeNumber * hashCode + key.charCodeAt(i)
+        }
+
+        return hashCode
+    }
 }
 
+const hash = new HashMap()
 
-let newLinkedList = linkedList()
-newLinkedList.addNode()
